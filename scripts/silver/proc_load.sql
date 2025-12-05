@@ -1,3 +1,6 @@
+create or alter procedure silver.load
+as
+BEGIN
 INSERT INTO silver.crm_cust_info(
 		cst_id,
 		cst_key,
@@ -120,3 +123,12 @@ case when cntry is null or trim(cntry)='' then 'N/A'
 	else trim(cntry)
 end as cntry
 from [bronze].[erp_loc_a101]
+
+insert into silver.erp_px_cat_g1v2(
+id,cat,subcat,maintenance)
+SELECT [id]
+      ,[cat]
+      ,[subcat]
+      ,[maintenance]
+  FROM [Datawarehouse].[bronze].[erp_px_cat_g1v2]
+END
