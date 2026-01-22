@@ -1,91 +1,106 @@
-📊 Data Warehouse Project – SQL Server
-📌 Project Summary
+🏢 Data Warehouse & Analytics Project (SQL)
+🔍 Overview
 
-This project demonstrates a practical implementation of a data warehouse using SQL Server, covering core concepts such as ETL, data modeling, and analytical querying.
-It is designed to showcase real-world SQL and data warehousing fundamentals commonly expected from a junior data engineer / data analyst.
+This project demonstrates data warehouse design and analytics using SQL.
+It focuses on building a star schema, loading transformed data, and generating business insights through analytical queries.
 
-🏗️ Architecture
+🎯 Business Use Case
 
-The project follows a medallion (layered) architecture:
+Organizations require well-modeled data warehouses to support:
 
-Bronze Layer – Raw source data ingested from CSV files
+Fast reporting
 
-Silver Layer – Cleaned, validated, and transformed data
+Reliable KPIs
 
-Gold Layer – Business-ready data modeled using a star schema
+Historical trend analysis
 
-🛠️ Technologies Used
+This project simulates a real-world analytics workload on structured business data.
 
-SQL Server
+🏗 Data Modeling Approach
 
-T-SQL
+Designed a Star Schema
 
-CSV datasets
+Clearly separated fact and dimension tables
 
-Star Schema (Fact & Dimension tables)
+Optimized for OLAP workloads
 
-🔄 ETL Process
+📐 Schema Design
 
-Extracted raw data from source files
+Fact Table
 
-Performed data cleansing and standardization
+Sales fact (measures like revenue, quantity)
 
-Transformed data into structured dimension and fact tables
+Dimension Tables
 
-Loaded analytics-ready data into the Gold layer
+Date
 
-📊 Data Modeling
+Product
 
-Designed dimension tables (e.g., customer, product, date)
+Customer
 
-Designed fact tables for analytical reporting
+Store / Location
 
-Applied primary and foreign key relationships
+          Dim_Date
+              |
+Dim_Product — Fact_Sales — Dim_Store
+              |
+         Dim_Customer
 
-Optimized schema for analytical queries
+🛠 Tech Stack
 
-🎯 Key Learnings & Skills Demonstrated
+SQL
 
-Data warehouse fundamentals
+Relational Database
 
-ETL using SQL Server
+Data Warehouse Concepts
 
-Data transformation and validation
+Star schema
 
-Star schema design
+OLAP analytics
 
-Writing analytical SQL queries
+Aggregations
 
-Understanding reporting-friendly data structures
+📊 Analytical Queries Implemented
 
-📚 Learning Reference
+Revenue trends over time
 
-This project is inspired by and built with guidance from the YouTube channel:
+Top-performing products
 
-📺 Data With Baraa
-👉 https://www.youtube.com/@DataWithBaraa
+Store-wise sales contribution
 
-The channel provides hands-on learning for:
+Customer segmentation metrics
 
-SQL Server
+Monthly and quarterly KPIs
 
-Data Warehousing concepts
+⚡ Optimization Techniques
 
-ETL design
+Proper indexing
 
-Real-world data projects
+Reduced data scans
 
-🚀 Future Enhancements
+Pre-aggregated metrics
 
-Incremental data loading
+Efficient joins
 
-Stored procedures for ETL
+📈 Business Insights
 
-Query performance optimization
+Identified high-revenue products
 
-Power BI dashboard integration
+Tracked seasonal sales patterns
+
+Enabled faster executive reporting
+
+🔮 Future Enhancements
+
+Integration with BI tools (Power BI / Tableau)
+
+Incremental fact loading
+
+Slowly Changing Dimensions (SCD)
+
+Query performance benchmarking
 
 👤 Author
 
 Tushar Patgar
-Junior Data Professional | SQL Server | Data Warehousing
+Data Engineer | SQL | Data Modeling | Analytics
